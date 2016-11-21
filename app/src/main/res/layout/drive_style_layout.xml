@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/driving_bg" >
+    
+    <!-- 테스트 -->
+
+    <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center" >
+
+        <kr.hdd.carleaming.common.textview.NanumBarunGothicBold_TextView 
+            android:id="@+id/auto_diagnosis_test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="차량자동진단 페이지" />
+
+        <Button
+            android:id="@+id/auto_diagnosis_test_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/auto_diagnosis_test_text"
+            android:text="테스트버튼" />
+    </RelativeLayout> -->
+    
+    <RelativeLayout
+        android:id="@+id/drive_style_car_title_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detail_subtitle_bg" >
+
+        <LinearLayout
+            android:id="@+id/drive_style_car_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="8.5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_style_title_car_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.5dp"
+                android:text="@string/edit_car_name"
+                android:textColor="@color/_E97900"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/drive_style_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/drive_style_car_name"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기간 | "
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2014.07.10(월)"
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ~ 2014.08.16(화)"
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+            
+            <Button 
+                android:id="@+id/drive_style_date_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/driving_icon_cal"/>
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/drive_style_date"
+            android:orientation="horizontal"
+            android:background="@drawable/driving_subtitle_bg" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_style_mileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="309km"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/_747474"
+                android:textSize="12dp" />
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_style__fuel_consumption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11.1km"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/_747474"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_style_oil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="47.900"
+                android:layout_marginLeft="370dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/_747474"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_style_time_mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11시간"
+                android:layout_marginLeft="500dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/_747474"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_style_time_ss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29분"
+                android:layout_marginLeft="530dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/_747474"
+                android:textSize="12dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <Button 
+            android:id="@+id/equip_today_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_drive_left"
+            android:layout_marginTop="102dp"
+            android:layout_alignParentLeft="true" />
+        
+        <Button 
+            android:id="@+id/equip_month_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_drive_right"
+            android:layout_marginTop="102dp"
+            android:layout_alignParentRight="true" />
+        
+        <RelativeLayout 
+            android:id="@+id/drive_style_pie_Layout"
+            android:layout_width="174dp"
+            android:layout_height="174dp"
+            android:layout_marginLeft="100.5dp"
+            android:layout_marginTop="120.5dp" >
+            
+            <ImageView 
+                android:id="@+id/drive_style_pie_img"
+                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp" >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content" 
+            	android:layout_marginTop="126dp"
+            	android:layout_marginLeft="260dp"
+            	android:background="@drawable/drivinig_subtitle_01"/>
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="04:"
+                android:layout_marginLeft="391dp"
+                android:layout_marginTop="132dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_marginLeft="409dp"
+                android:layout_marginTop="132dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content" 
+            	android:layout_marginTop="156dp"
+            	android:layout_marginLeft="283dp"
+            	android:background="@drawable/drivinig_subtitle_02"/>
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_speed_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01:"
+                android:layout_marginLeft="391dp"
+                android:layout_marginTop="162dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_speed_down2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_marginLeft="409dp"
+                android:layout_marginTop="162dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content" 
+            	android:layout_marginTop="186dp"
+            	android:layout_marginLeft="283dp"
+            	android:background="@drawable/drivinig_subtitle_03"/>
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_speed_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01:"
+                android:layout_marginLeft="391dp"
+                android:layout_marginTop="192dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_speed_up2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_marginLeft="409dp"
+                android:layout_marginTop="192dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="측정유류비 ("
+                android:layout_marginLeft="428dp"
+                android:layout_marginTop="192dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_oil_value1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35,350)"
+                android:layout_marginLeft="480dp"
+                android:layout_marginTop="192dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content" 
+            	android:layout_marginTop="216dp"
+            	android:layout_marginLeft="283dp"
+            	android:background="@drawable/drivinig_subtitle_04"/>
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_gong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01:"
+                android:layout_marginLeft="391dp"
+                android:layout_marginTop="222dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_gong2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_marginLeft="409dp"
+                android:layout_marginTop="222dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="측정유류비 ("
+                android:layout_marginLeft="428dp"
+                android:layout_marginTop="222dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive_oil_value2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6,350)"
+                android:layout_marginLeft="480dp"
+                android:layout_marginTop="222dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+            	android:layout_height="wrap_content" 
+            	android:layout_marginTop="246dp"
+            	android:layout_marginLeft="283dp"
+            	android:background="@drawable/drivinig_subtitle_05"/>
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01:"
+                android:layout_marginLeft="391dp"
+                android:layout_marginTop="252dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/drive2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:layout_marginLeft="409dp"
+                android:layout_marginTop="252dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            
+            
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

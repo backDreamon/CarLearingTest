@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/driving_popup_bg" >
+    
+    <DatePicker
+        android:id="@+id/popup_start_datepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:maxDate="0d"
+        android:layout_marginLeft="35.5dp"
+        android:layout_marginTop="90dp"
+        android:spinnersShown="true" />
+    
+    
+    <DatePicker
+        android:id="@+id/popup_end_datepicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarViewShown="false"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="31dp"
+        android:maxDate="0d"
+        android:spinnersShown="true" />
+    
+    <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="134dp"
+        android:background="@drawable/driving_icon_date"/>
+    
+    <Button
+        android:id="@+id/date_check_btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="274dp"
+        android:layout_marginLeft="190dp"
+        android:background="@drawable/btn_ok" />
+    
+    <Button
+        android:id="@+id/date_check_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/date_check_btn_ok"
+        android:layout_marginTop="274dp"
+        android:layout_marginLeft="9.5dp"
+        android:background="@drawable/btn_cancel" />
+
+</RelativeLayout>

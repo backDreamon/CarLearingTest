@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/equip_popup_bg" >
+    
+    <EditText 
+        android:id="@+id/edit_car_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_car_name"
+        android:background="@null"
+        android:textSize="14dp"
+        android:nextFocusDown="@+id/edit_vehicle_number"
+        android:textColor="@color/_FFFFFF"
+        android:layout_marginLeft="115dp"
+        android:maxLength="11"
+        android:layout_marginTop="95dp" />
+    
+    <EditText 
+        android:id="@+id/edit_vehicle_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_vehicle_number"
+        android:background="@null"
+        android:textColor="@color/_FFFFFF"
+        android:textSize="14dp"
+        android:maxLength="11"
+        android:nextFocusDown="@+id/edit_car_number"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="143dp" />
+    
+    <EditText 
+        android:id="@+id/edit_car_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_car_number"
+        android:background="@null"
+        android:textColor="@color/_FFFFFF"
+        android:textSize="14dp"
+        android:maxLength="11"
+        android:nextFocusDown="@+id/edit_car_model"
+        android:layout_marginLeft="115dp"
+        android:layout_marginTop="193dp" />
+    
+    <EditText 
+        android:id="@+id/edit_car_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_car_model"
+        android:background="@null"
+        android:textColor="@color/_FFFFFF"
+        android:textSize="14dp"
+        android:inputType="number"
+        android:maxLength="7"
+        android:imeOptions="actionDone"
+        android:layout_marginLeft="483dp"
+        android:layout_marginTop="95dp" />
+    
+    <Spinner 
+        android:id="@+id/edit_spinner"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dialog"
+        android:prompt="@string/spinner_oilType"
+        style="@style/DialogSpinner"
+        android:drawSelectorOnTop = "true" 
+        android:layout_marginLeft="483dp"
+        android:layout_marginTop="130dp"/>
+    
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="274dp"
+        android:layout_marginLeft="190dp"
+        android:background="@drawable/btn_ok" />
+    
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_ok"
+        android:layout_marginTop="274dp"
+        android:layout_marginLeft="9.5dp"
+        android:background="@drawable/btn_cancel" />
+
+</RelativeLayout>

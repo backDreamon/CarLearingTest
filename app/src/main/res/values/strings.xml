@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CarLearningTEST</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- title -->
+    <string name="title_auto_diagnosis">차량 자동진단</string>
+    <string name="title_equip">소모품관리</string>
+    <string name="title_drivce_style">주행스타일 분석</string>
+    <string name="title_drivce_monitoring">주행모니터링</string>
+    <string name="title_paring_gps_search">주차위치찾기</string>
+    
+    <!-- Toast -->
+    <string name="toast_bluetooth_not_enable">bluetooth_not_enable</string>
+    <string name="toast_not_connected">You are not connected to a device</string>
+    <string name="toast_restart">다시 시도해주세요.</string>
+    <string name="toast_no_phone_number">번호가 없는 기기 입니다.</string>
+    <string name="toast_not_server">서버와 통신이 원활하지 않습니다.</string>
+    
+    <!-- http -->
+	<string name="generic_server_down">서버와 연결할 수 없습니다.</string>
+	<string name="no_internet">네트워크 연결상태를 확인해주세요.</string>
+	<string name="generic_error">알수없는 에러가 발생했습니다.</string>
+
+	<!-- edit -->
+	<string name="edit_car_name">차량 이름을 입력해 주세요.</string>
+	<string name="edit_vehicle_number">차대번호를 입력해주세요.</string>
+	<string name="edit_car_number">차량번호를 입력해 주세요.</string>
+	<string name="edit_car_model">연식을 입력해 주세요.</string>
+	<string name="edit_car_km">운행 거리를 입력해 주세요.</string>
+	
+	<!-- spinner -->
+	<string name="spinner_oilType">유종을 선택하세요.</string>	
+	
+	<string name="fill_storage">저장 장소가 부족합니다.\n기존 파일을 정리해 주세요.</string>
+	<string name="available_storage">%s mb 사용 가능합니다.</string>
+	<string name="now_recording">현재 녹화중입니다.</string>
+	
+	<string name="Alert_noty">알림</string>
+	<string name="Ok">예</string>
+	<string name="Esc">취소</string>
+	<string name="delete_file">삭제 하시겠습니까?</string>
+	<string name="Camera_Recoding">녹화 중</string>
+
+	<!-- BT -->
+	<string name="title_paired_device">페어링된 기기</string>
+	<string name="button_scan">기기 스캔하기</string>
+	<string name="new_devices">새로 탐색된 기기</string>
+	<string name="bt_title">블루투스 연결</string>
+	<string name="bt_scanning">기기 스캔 중</string>
+</resources>

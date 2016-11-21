@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <kr.hdd.carleamingTest.common.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    
+    <!-- 버튼 컨텐트 -->
+    <RelativeLayout
+        android:id="@+id/camera_buttons_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#55000000">
+        
+        
+        <Button
+            android:id="@+id/camera_view_btn_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/rec_selector"
+            
+            android:layout_centerVertical="true"/>
+        
+         <Button
+            android:id="@+id/camera_view_btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stop_selector"
+            
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/camera_view_btn_rec"/>
+         
+         <TextView
+            android:id="@+id/camera_view_recoding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/camera_view_btn_stop"
+            android:text="@string/Camera_Recoding"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+         
+         <TextView
+            android:id="@+id/tv_cpu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="300dp"
+            android:layout_centerVertical="true"
+            android:text="CPU: "
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+         
+         <TextView
+            android:id="@+id/tv_cpu_per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_cpu"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+         
+         <Button
+             android:id="@+id/camera_view_btn_folder"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="12dp"
+             android:background="@drawable/ic_folder" />
+        
+    </RelativeLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#00aabb" >
+
+    
+    <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/auto_diagnosis_test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="차량자동진단 페이지" />
+
+        <Button
+            android:id="@+id/auto_diagnosis_test_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/auto_diagnosis_test_text"
+            android:text="테스트버튼" />
+    </RelativeLayout> -->
+    
+    <fragment 
+        android:id="@+id/map_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="kr.hdd.GoogleMapVersion2.Fragmen"
+        class="com.google.android.gms.maps.SupportMapFragment"  />
+
+</LinearLayout>

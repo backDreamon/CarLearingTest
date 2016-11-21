@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center" >
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+    
+    <ImageView 
+        android:id="@+id/drive_monitring_img_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/monitor_panel_graph_off"
+        android:layout_marginLeft="5dp" />
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+    <ImageView 
+        android:id="@+id/equip_img_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="2.5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <ImageView 
+        android:id="@+id/equip_img_010"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/equip_graph_off"/>
+    
+    <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+        android:id="@+id/equip_img_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/_0E62AB"
+        android:layout_marginTop="3dp"
+        android:text="0km"
+        android:textSize="10dp"/>
+
+</LinearLayout>

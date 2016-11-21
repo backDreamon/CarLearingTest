@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg" >
+
+    <Button
+        android:id="@+id/btn_car_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_carinfo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="208.5dp"
+        android:layout_marginTop="23.5dp"
+        android:background="@drawable/main_title"
+        android:clickable="true"
+        android:id="@+id/main_icon"/>
+
+    <Button
+        android:id="@+id/btn_blackBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="561dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_blackbox" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="66dp"
+        android:background="@drawable/sub_title_bg"
+        android:orientation="vertical" />
+
+    <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+        android:id="@+id/main_car_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:gravity="center"
+        android:text="차량이름을 입력해주세요."
+        android:textColor="@color/_E97900"
+        android:textSize="16dp" />
+
+    <Button
+        android:id="@+id/main_btn_auto_diagnosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28.5dp"
+        android:layout_marginTop="99.5dp"
+        android:background="@drawable/btn_diagno" />
+
+    <Button
+        android:id="@+id/main_btn_equip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="224.5dp"
+        android:layout_marginTop="99.5dp"
+        android:background="@drawable/btn_equip" />
+
+    <Button
+        android:id="@+id/main_btn_drive_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="420dp"
+        android:layout_marginTop="99.5dp"
+        android:background="@drawable/btn_driving" />
+
+    <Button
+        android:id="@+id/main_btn_drive_monitoring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="224.5dp"
+        android:background="@drawable/btn_monitor" />
+
+    <Button
+        android:id="@+id/main_btn_paking_gps_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="225dp"
+        android:background="@drawable/btn_location" />
+
+</RelativeLayout>

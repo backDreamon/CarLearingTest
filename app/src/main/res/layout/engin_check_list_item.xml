@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <kr.hdd.carleamingTest.common.textview.HelbeticaNeueLt_TextView
+        android:id="@+id/engin_check_bottom_error_code_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="P0100"
+        android:textColor="@color/_4AB9FF"
+        android:textSize="22dp"/>
+    
+    <kr.hdd.carleamingTest.common.textview.HelbeticaNeueLt_TextView
+        android:id="@+id/engin_check_bottom_error_code_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/engin_check_bottom_error_code_text"
+        android:text="Problems in Power Train"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        android:textColor="@color/_FFFFFF"
+        android:textSize="19dp" />
+
+</RelativeLayout>

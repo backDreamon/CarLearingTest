@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/driving_bg" >
+
+    <!-- 테스트 -->
+    <!--
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center" >
+
+        <kr.hdd.carleaming.common.textview.NanumBarunGothicBold_TextView 
+            android:id="@+id/auto_diagnosis_test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="차량자동진단 페이지" />
+
+        <Button
+            android:id="@+id/auto_diagnosis_test_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/auto_diagnosis_test_text"
+            android:text="테스트버튼" />
+    </RelativeLayout>
+    -->
+
+    <RelativeLayout
+        android:id="@+id/equip_car_title_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detail_subtitle_bg" >
+
+        <LinearLayout
+            android:id="@+id/equip_car_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="8.5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_title_car_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4.5dp"
+                android:text="차량이름을 입력해주세요"
+                android:textColor="@color/_E97900"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/equip_car_info_btn"
+                android:layout_width="65dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/btn_carinfo"
+                android:layout_marginTop="2dp"
+                android:layout_height="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/equip_car_name_layout"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="년주행량 | "
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_title_drive_count1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="km"
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ~ "
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_title_drive_count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+            
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="km"
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/equip_car_title_info" >
+        
+        <RelativeLayout
+            android:id="@+id/equip_box_01_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginTop="8.5dp"
+            android:background="@drawable/equip_box_01"
+            android:clickable="true" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_box_01_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="24dp"
+                android:text="교환일"
+                android:textColor="@color/_5D5D5D"
+                android:textSize="10dp" />
+            
+            <include 
+                android:id="@+id/equip_box_01_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/equip_box_01_text"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="55dp"
+                layout="@layout/equip_graph"/>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/equip_box_02_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220.5dp"
+            android:layout_marginTop="8.5dp"
+            android:background="@drawable/equip_box_02"
+            android:clickable="true" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_box_02_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="24dp"
+                android:text="교환일"
+                android:textColor="@color/_5D5D5D"
+                android:textSize="10dp" />
+            
+            <include 
+                android:id="@+id/equip_box_02_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/equip_box_02_text"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="55dp"
+                layout="@layout/equip_graph"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/equip_box_03_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="432.5dp"
+            android:layout_marginTop="8.5dp"
+            android:background="@drawable/equip_box_03"
+            android:clickable="true" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_box_03_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="24dp"
+                android:text="교환일"
+                android:textColor="@color/_5D5D5D"
+                android:textSize="10dp" />
+            
+            <include 
+                android:id="@+id/equip_box_03_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/equip_box_03_text"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="55dp"
+                layout="@layout/equip_graph"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/equip_box_04_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/equip_box_04"
+            android:clickable="true" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_box_04_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="24dp"
+                android:text="교환일"
+                android:textColor="@color/_5D5D5D"
+                android:textSize="10dp" />
+            
+            <include 
+                android:id="@+id/equip_box_04_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/equip_box_04_text"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="55dp"
+                layout="@layout/equip_graph"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/equip_box_05_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220.5dp"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/equip_box_05"
+            android:clickable="true" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_box_05_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="24dp"
+                android:text="교환일"
+                android:textColor="@color/_5D5D5D"
+                android:textSize="10dp" />
+            
+            <include 
+                android:id="@+id/equip_box_05_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/equip_box_05_text"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="55dp"
+                layout="@layout/equip_graph"/>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/equip_box_06_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="432.5dp"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/equip_box_06"
+            android:clickable="true" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_box_06_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="24dp"
+                android:text="교환일(2017.04.13)"
+                android:textColor="@color/_5D5D5D"
+                android:textSize="10dp" />
+            
+            <include 
+                android:id="@+id/equip_box_06_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/equip_box_06_text"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="55dp"
+                layout="@layout/equip_graph"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/equip_box_07_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginTop="161dp"
+            android:background="@drawable/equip_box_07"
+            android:clickable="true" >
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_box_07_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="24dp"
+                android:text="교환일"
+                android:textColor="@color/_5D5D5D"
+                android:textSize="10dp" />
+            
+            <include 
+                android:id="@+id/equip_box_07_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/equip_box_07_text"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="55dp"
+                layout="@layout/equip_graph"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/equip_box_08_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220.5dp"
+            android:layout_marginTop="161dp"
+            android:background="@drawable/equip_box_08"
+            android:clickable="true" >
+
+            
+             <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:id="@+id/equip_box_08_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="24dp"
+                android:text="교환일(2017.04.13)"
+                android:textColor="@color/_5D5D5D"
+                android:textSize="10dp" />
+             
+            <include 
+                android:id="@+id/equip_box_08_include"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/equip_box_08_text"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="55dp"
+                layout="@layout/equip_graph"/>
+        </RelativeLayout>
+        
+        <include 
+            android:id="@+id/equip_box_01_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/equip_back_act"
+            android:visibility="gone"
+            android:layout_marginLeft="8.5dp"
+        	android:layout_marginTop="8.5dp"/>
+        
+        <include 
+            android:id="@+id/equip_box_02_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/equip_back_act"
+            android:visibility="gone"
+            android:layout_marginLeft="220.5dp"
+            android:layout_marginTop="8.5dp"/>
+        
+        <include 
+            android:id="@+id/equip_box_03_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/equip_back_act"
+            android:visibility="gone"
+            android:layout_marginLeft="432.5dp"
+            android:layout_marginTop="8.5dp"/>
+        
+        <include 
+            android:id="@+id/equip_box_04_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/equip_back_act"
+            android:visibility="gone"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginTop="85dp"/>
+        
+        <include 
+            android:id="@+id/equip_box_05_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/equip_back_act"
+            android:visibility="gone"
+            android:layout_marginLeft="220.5dp"
+            android:layout_marginTop="85dp"/>
+        
+        <include 
+            android:id="@+id/equip_box_06_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/equip_back_act"
+            android:visibility="gone"
+            android:layout_marginLeft="432.5dp"
+            android:layout_marginTop="85dp"/>
+        
+        <include 
+            android:id="@+id/equip_box_07_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/equip_back_act"
+            android:visibility="gone"
+            android:layout_marginLeft="8.5dp"
+            android:layout_marginTop="161dp"/>
+        
+        <include 
+            android:id="@+id/equip_box_08_click_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/equip_back_act"
+            android:visibility="gone"
+           android:layout_marginLeft="220.5dp"
+            android:layout_marginTop="161dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

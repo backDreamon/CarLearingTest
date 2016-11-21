@@ -1,0 +1,16 @@
+<resources>
+    
+    <color name="_E97900">#E97900</color>
+    <color name="_FFFFFF">#FFFFFF</color>
+    <color name="_CECECE">#CECECE </color>
+    <color name="_5D5D5D">#5D5D5D</color>
+    <color name="_0E62AB">#0E62AB</color>
+    <color name="_747474">#747474</color>
+    <color name="_000000">#000000</color>
+    <color name="_FF0000">#FF0000</color>
+    <color name="_4AB9FF">#4AB9FF</color>
+    
+    
+    <color name="file_text_normal">#9f9e9e</color>
+    <color name="file_text_select">#ff0000</color>
+</resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/detail_title_bg">
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7.5dp"
+            android:background="@drawable/btn_home" />
+
+        <Button
+            android:id="@+id/car_body_title_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="190dp"
+            android:background="@drawable/btn_title_left" />
+
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/diagno_title" />
+
+        <Button
+            android:id="@+id/car_body_title_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="190dp"
+            android:background="@drawable/btn_title_right" />
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7.5dp"
+            android:background="@drawable/btn_close" />
+    </RelativeLayout>
+    <!--
+    <LinearLayout 
+        android:id="@+id/main_body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.85"
+        android:gravity="center" >
+        
+        
+    </LinearLayout>
+    -->
+
+    <LinearLayout
+        android:id="@+id/main_body_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_body_fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <fragment
+            android:id="@+id/map_fragment"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/cast_intro_overlay" />
+
+        <Button
+            android:id="@+id/map_btn_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_location_01" />
+
+        <Button
+            android:id="@+id/map_btn_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/map_btn_01"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/btn_location_02" />
+
+        <Button
+            android:id="@+id/map_btn_03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/map_btn_02"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/btn_location_03" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="bottom">
+
+            <RelativeLayout
+                android:id="@+id/map_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/location_box"
+                android:gravity="bottom">
+
+                <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                    android:id="@+id/map_address_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left"
+                    android:text="2014.12.14"
+                    android:textColor="#ffffff" />
+
+                <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                    android:id="@+id/map_address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/map_address_date"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="left"
+                    android:text="서울시 서초구 반포동 반포아파트 20동 401호"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

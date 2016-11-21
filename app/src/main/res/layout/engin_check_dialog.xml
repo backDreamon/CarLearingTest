@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/diagno_popup_bg" >
+    
+    <!-- x이미지 -->
+    <Button 
+        android:id="@+id/engin_check_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8.5dp"
+        android:layout_marginRight="3.5dp"
+        android:background="@drawable/btn_close"/>
+    
+    <!-- 상단 -->
+    <ImageView 
+        android:id="@+id/engin_check_img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/diagno_icon_ok"/>
+    
+    <RelativeLayout 
+        android:id="@+id/engin_check_alertbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85.5dp"
+        android:layout_marginLeft="121.5dp"
+        android:background="@drawable/diagno_alert_box_bg">
+        
+        <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/_FF0000"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="8dp"
+            android:textSize="15dp"
+            android:text="After MILon on"/>
+        
+    </RelativeLayout>
+    
+    <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+        android:id="@+id/engin_check_time_mm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/_FFFFFF"
+        android:layout_below="@id/engin_check_alertbox"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="24.5dp"
+        android:textSize="24dp"
+        android:text="02:"/>
+    
+    <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+        android:id="@+id/engin_check_time_ss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/_FFFFFF"
+        android:layout_below="@id/engin_check_alertbox"
+        android:layout_toRightOf="@id/engin_check_time_mm"
+        android:layout_marginTop="24.5dp"
+        android:textSize="24dp"
+        android:text="00"/>
+    
+    <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+        android:id="@+id/engin_check_mileage_mm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/_FFFFFF"
+        android:layout_below="@id/engin_check_alertbox"
+        android:layout_marginLeft="420dp"
+        android:layout_marginTop="24.5dp"
+        android:textSize="24dp"
+        android:text="2000"/>
+    
+    <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+        android:id="@+id/engin_check_mileage_ss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/_FFFFFF"
+        android:layout_below="@id/engin_check_alertbox"
+        android:layout_toRightOf="@id/engin_check_mileage_mm"
+        android:layout_marginTop="24.5dp"
+        android:textSize="24dp"
+        android:text=" KM"/>
+    
+    <!-- 하단 -->
+    
+    <ImageView 
+        android:id="@+id/engin_check_bottom_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/engin_check_img1"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/diagno_icon_setting"/>
+    
+    <ListView 
+        android:id="@+id/engin_check_bottom_error_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="P0100"
+        android:layout_toRightOf="@id/engin_check_bottom_img"
+        android:layout_marginTop="217dp"
+        android:layout_marginLeft="48dp"
+        android:textColor="@color/_4AB9FF"
+        android:listSelector="#00000000"
+        android:clickable="false"
+        android:focusable="false"
+        android:textSize="22dp" />
+
+</RelativeLayout>

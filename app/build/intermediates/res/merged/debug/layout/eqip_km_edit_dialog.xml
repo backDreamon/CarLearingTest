@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/_000000" >
+    
+    <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="70dp"
+        android:textColor="@color/_FFFFFF"
+        android:textSize="40dp"
+        android:text="최종 교환 KM" />
+    
+    <EditText 
+        android:id="@+id/edit_car_km"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="@string/edit_car_km"
+        android:background="@null"
+        android:textSize="20dp"
+        android:inputType="number"
+        android:maxLength="8"
+        android:textColor="@color/_FFFFFF"
+        android:layout_marginRight="55dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="135dp" />
+    
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="274dp"
+        android:layout_marginLeft="190dp"
+        android:background="@drawable/btn_ok" />
+    
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn_ok"
+        android:layout_marginTop="274dp"
+        android:layout_marginLeft="9.5dp"
+        android:background="@drawable/btn_cancel" />
+
+</RelativeLayout>
