@@ -346,6 +346,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
     }
 
     private void reConnectBT() {
+        CarLLog.v(TAG, "reConnectBT()");
         mBtAdapter = BluetoothAdapter.getDefaultAdapter();
 
         if (mBtAdapter == null) {
@@ -354,7 +355,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
 
         } else {
             if (mBtAdapter.isEnabled()) {
-                CarLLog.v(TAG, "기기의 블루투스 상태가 on인경우");
+                CarLLog.v(TAG, "블루투스 온");
 
                 getMacAddress(MainActivity.this);
 
@@ -363,7 +364,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
                 startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
 
             } else {
-                CarLLog.v(TAG, "블루투스가 off");
+                CarLLog.v(TAG, "블루투스 오프");
 
                 Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                 startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
