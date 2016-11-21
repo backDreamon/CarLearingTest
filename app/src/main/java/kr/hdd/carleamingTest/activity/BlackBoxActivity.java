@@ -1,15 +1,5 @@
 package kr.hdd.carleamingTest.activity;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import kr.hdd.carleamingTest.R;
-import kr.hdd.carleamingTest.common.CameraView;
-import kr.hdd.carleamingTest.common.CommonConst;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -25,6 +15,17 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import kr.hdd.carleamingTest.R;
+import kr.hdd.carleamingTest.common.CameraView;
+import kr.hdd.carleamingTest.common.CommonConst;
 
 public class BlackBoxActivity extends Activity implements OnClickListener{
 	private static final String TAG= "BlackBoxActivity";
