@@ -6,10 +6,10 @@ public class UrlConstants {
 	public static final String SERVER = "http://27.102.198.45:8080/smartcar";//"http://192.168.0.11:8080";//"http://211.58.11.2:8088";
 
 	public static final String URL_COMMON = "/generic/execute";// ?entityAlias=userinfo&method=";
-	
+
 	//사용자 등록
 	public static final String USER_REGISTRATION = "insert&userPhoneBTMac=";
-	
+
 	//사용자 정보 수정
 	public static final String USER_INFO_REVISE = "update&userId=";
 	

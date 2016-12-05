@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="300dp"
             android:layout_centerVertical="true"
-            android:text="CPU: "
+            android:text="@string/common_cpu"
             android:textColor="#ffffff"
             android:textSize="18sp"
             android:textStyle="bold" />

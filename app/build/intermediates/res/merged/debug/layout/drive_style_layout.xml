@@ -46,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4.5dp"
-                android:text="그랜드 카니발 2011"
+                android:text="@string/edit_car_name"
                 android:textColor="@color/_E97900"
                 android:textSize="16dp" />
 
@@ -63,7 +63,7 @@
             <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="기간 | "
+                android:text="@string/common_date_term"
                 android:textColor="@color/_CECECE"
                 android:textSize="12dp" />
 
@@ -71,15 +71,22 @@
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2014.07.10(월)"
+                android:text="@string/common_date"
                 android:textColor="@color/_CECECE"
                 android:textSize="12dp" />
             
             <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_tilde"
+                android:textColor="@color/_CECECE"
+                android:textSize="12dp" />
+
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
                 android:id="@+id/date2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" ~ 2014.08.16(화)"
+                android:text="@string/common_date"
                 android:textColor="@color/_CECECE"
                 android:textSize="12dp" />
             
@@ -102,7 +109,7 @@
                 android:id="@+id/drive_style_mileage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="309km"
+                android:text="@string/common_lower_kilometer"
                 android:layout_marginLeft="130dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/_747474"
@@ -112,7 +119,7 @@
                 android:id="@+id/drive_style__fuel_consumption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11.1km"
+                android:text="@string/common_lower_kilometer"
                 android:layout_marginLeft="250dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/_747474"
@@ -122,7 +129,7 @@
                 android:id="@+id/drive_style_oil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="47.900"
+                android:text="@string/common_zero"
                 android:layout_marginLeft="370dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/_747474"
@@ -132,7 +139,7 @@
                 android:id="@+id/drive_style_time_mm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11시간"
+                android:text="@string/common_time"
                 android:layout_marginLeft="500dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/_747474"
@@ -142,7 +149,7 @@
                 android:id="@+id/drive_style_time_ss"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="29분"
+                android:text="@string/common_time"
                 android:layout_marginLeft="530dp"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/_747474"
@@ -201,8 +208,16 @@
                 android:id="@+id/drive_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="04:"
+                android:text="@string/common_time"
                 android:layout_marginLeft="391dp"
+                android:layout_marginTop="132dp"
+                android:textColor="@color/_FFFFFF"
+                android:textSize="12dp" />
+            <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/common_colon"
+                android:layout_marginLeft="403dp"
                 android:layout_marginTop="132dp"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="12dp" />
@@ -211,8 +226,8 @@
                 android:id="@+id/drive_time2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00"
-                android:layout_marginLeft="409dp"
+                android:text="@string/common_time"
+                android:layout_marginLeft="408dp"
                 android:layout_marginTop="132dp"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="12dp" />

@@ -1,7 +1,5 @@
 package kr.hdd.carleamingTest.activity;
 
-import kr.hdd.carleamingTest.R;
-import kr.hdd.carleamingTest.util.CarLLog;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,6 +16,9 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import kr.hdd.carleamingTest.R;
+import kr.hdd.carleamingTest.util.CarLLog;
+
 public class ParingGpsSearchFragment extends Fragment {
 
 	private static final String TAG = ParingGpsSearchFragment.class.getSimpleName();
@@ -25,7 +26,7 @@ public class ParingGpsSearchFragment extends Fragment {
 	private GoogleMap mGoogleMap = null;
 	
 	private int DEFAULT_ZOOM_LEVEL = 13;
-	
+
 	private TextView mTestText = null;
 	private Button mTestBtn = null;
 	

@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="right"
-                android:text="1200"
+                android:text="@string/common_zero"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
             
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="102dp"
                 android:gravity="right"
-                android:text="4,713"
+                android:text="@string/common_zero"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
 
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="171.5dp"
                 android:gravity="right"
-                android:text="0"
+                android:text="@string/common_zero"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
 
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="242dp"
                 android:gravity="right"
-                android:text="40"
+                android:text="@string/common_zero"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
         </RelativeLayout>
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="46dp"
-                android:text="그랜져 HG"
+                android:text="@string/edit_car_name"
                 android:textColor="@color/_E97900"
                 android:textSize="16dp" />
 
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="152dp"
-                android:text="12.8"
+                android:text="@string/common_zero"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="36dp" />
         </RelativeLayout>
@@ -140,7 +140,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="right"
-                android:text="200"
+                android:text="@string/common_zero"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
             
@@ -157,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="102dp"
                 android:gravity="right"
-                android:text="67"
+                android:text="@string/common_time"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
 
@@ -167,7 +167,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="102dp"
                 android:gravity="right"
-                android:text="30"
+                android:text="@string/common_time"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
 
@@ -177,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="171.5dp"
                 android:gravity="right"
-                android:text="530,000"
+                android:text="@string/common_zero"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
 
@@ -187,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="242dp"
                 android:gravity="right"
-                android:text="7.4"
+                android:text="@string/common_zero"
                 android:textColor="@color/_FFFFFF"
                 android:textSize="30dp" />
         </RelativeLayout>

@@ -15,7 +15,7 @@
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
     <color name="_000000">#000000</color>
-    <color name="_0E62AB">#0E62AB</color>
+    <color name="_0E62AB">#0e1e41</color>
     <color name="_4AB9FF">#4AB9FF</color>
     <color name="_5D5D5D">#5D5D5D</color>
     <color name="_747474">#747474</color>
@@ -413,6 +413,11 @@
     <string name="bt_scanning">기기 스캔 중</string>
     <string name="bt_title">블루투스 연결</string>
     <string name="button_scan">기기 스캔하기</string>
+    <string name="common_centigrade">℃</string>
+    <string name="common_colon">:</string>
+    <string name="common_cpu">CPU</string>
+    <string name="common_date">2016.12.31(월)</string>
+    <string name="common_date_term">기간 | </string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
     <string msgid="227660514972886228" name="common_google_play_services_enable_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t work unless you enable Google Play services.</string>
     <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -427,9 +432,16 @@
     <string msgid="6006316683626838685" name="common_google_play_services_update_title">Update Google Play services</string>
     <string name="common_google_play_services_updating_text"><ns1:g id="app_name">%1$s</ns1:g> won\'t run without Google Play services, which are currently updating.</string>
     <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_liter">L</string>
+    <string name="common_lower_kilometer">km</string>
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="common_tilde"> ~ </string>
+    <string name="common_time">00</string>
+    <string name="common_upper_kilometer">KM</string>
+    <string name="common_won">원</string>
+    <string name="common_zero">0</string>
     <string name="delete_file">삭제 하시겠습니까?</string>
     <string name="edit_car_km">운행 거리를 입력해 주세요.</string>
     <string name="edit_car_model">연식을 입력해 주세요.</string>
@@ -445,6 +457,7 @@
     <string name="search_menu_title">Search</string>
     <string name="spinner_oilType">유종을 선택하세요.</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_parking_maps_fragment">Map</string>
     <string name="title_auto_diagnosis">차량 자동진단</string>
     <string name="title_drivce_monitoring">주행모니터링</string>
     <string name="title_drivce_style">주행스타일 분석</string>
@@ -467,9 +480,9 @@
             backward-compatibility can go here.
         -->
     </style>
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="Theme.AppCompat">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-        <item name="android:windowActionBar">true</item>
+        <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">

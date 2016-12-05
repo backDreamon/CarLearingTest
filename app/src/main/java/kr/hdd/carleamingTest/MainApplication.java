@@ -3,10 +3,8 @@ package kr.hdd.carleamingTest;
 import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Environment;
 import android.text.TextUtils;
-import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
@@ -17,18 +15,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.BufferOverflowException;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 
 import kr.hdd.carleamingTest.activity.data.AllDataContentData;
 import kr.hdd.carleamingTest.database.DBAdapter;
 import kr.hdd.carleamingTest.model.BluetoothService;
-import kr.hdd.carleamingTest.model.DeviceListActivity;
 import kr.hdd.carleamingTest.util.CarLLog;
-
-import static kr.hdd.carleamingTest.model.BluetoothService.REQUEST_CONNECT_DEVICE;
-import static kr.hdd.carleamingTest.model.BluetoothService.REQUEST_ENABLE_BT;
 
 public class MainApplication extends Application {
 

@@ -1,12 +1,5 @@
 package kr.hdd.carleamingTest.common.popup;
 
-import java.util.ArrayList;
-
-import kr.hdd.carleamingTest.MainApplication;
-import kr.hdd.carleamingTest.R;
-import kr.hdd.carleamingTest.common.popup.adapter.EnginCheckAdatper;
-import kr.hdd.carleamingTest.util.SupportedPidUtill;
-import kr.hdd.carleamingTest.util.Utils;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
@@ -21,6 +14,14 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+
+import kr.hdd.carleamingTest.MainApplication;
+import kr.hdd.carleamingTest.R;
+import kr.hdd.carleamingTest.common.popup.adapter.EnginCheckAdatper;
+import kr.hdd.carleamingTest.util.SupportedPidUtill;
+import kr.hdd.carleamingTest.util.Utils;
 
 public class PopupEnginCheck extends Dialog implements OnClickListener{
 	private final String TAG= "PopupEnginCheck";
@@ -108,7 +109,7 @@ public class PopupEnginCheck extends Dialog implements OnClickListener{
 			int timemm = Integer.parseInt(time) / 60;
 			int timess = Integer.parseInt(time) % 60;
 			
-			mTimeMM.setText(Utils.CutStr(timemm > 0 ? timemm : 0)+" : ");
+			mTimeMM.setText(Utils.CutStr(timemm > 0 ? timemm : 0));
 			mTimeSS.setText(Utils.CutStr(timess > 0 ? timess : 0));
 			mMileage.setText(String.format("%.1f", mileage));
 			

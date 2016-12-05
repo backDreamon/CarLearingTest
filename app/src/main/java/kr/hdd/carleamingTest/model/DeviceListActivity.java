@@ -37,7 +37,7 @@ import kr.hdd.carleamingTest.util.CarLLog;
  */
 public class DeviceListActivity extends Activity {
     // Debugging
-    private static final String TAG = "DeviceListActivity";
+    private static final String TAG = DeviceListActivity.class.getSimpleName();
     private static final boolean D = true;
 
     // Return Intent extra
@@ -174,6 +174,7 @@ public class DeviceListActivity extends Activity {
 
             // Set result and finish this Activity
             setResult(Activity.RESULT_OK, intent);
+            CarLLog.d(TAG,"RESULT_OK REQUEST");
             finish();
         }
     };

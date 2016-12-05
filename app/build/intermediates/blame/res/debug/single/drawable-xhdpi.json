@@ -28,8 +28,16 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_title.png"
     },
     {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_bluetooth_off.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_bluetooth_off.png"
+    },
+    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\location_btn_02_nor.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\location_btn_02_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\btn_setting.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\btn_setting.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_driving_nor.png",
@@ -64,12 +72,12 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_box_01_nor.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_carinfo_sel.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_carinfo_sel.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\icon.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_carinfo_sel.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_carinfo_sel.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_carinfo_nor.png",
@@ -96,12 +104,12 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\location_btn_02_sel.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_left_nor.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_left_nor.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_home_nor.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_home_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_left_nor.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_left_nor.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\detail_subtitle_bg.png",
@@ -116,12 +124,12 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\location_btn_01_sel.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\driving_btn_cancel_nor.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\driving_btn_cancel_nor.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_right_nor.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_right_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\driving_btn_cancel_nor.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\driving_btn_cancel_nor.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\diagno_table_03.png",
@@ -160,12 +168,12 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\diagno_btn_error_sel.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\location_btn_03_nor.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\location_btn_03_nor.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\time_bg.9.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\time_bg.9.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\location_btn_03_nor.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\location_btn_03_nor.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\btn_s_btm_pause_off.png",
@@ -176,12 +184,16 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_box_01_sel.png"
     },
     {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_monitor_nor.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_monitor_nor.png"
+    },
+    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\monitor_graph_06_on.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\monitor_graph_06_on.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_monitor_nor.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_monitor_nor.png"
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\equip_btn_reset.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_btn_reset.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\equip_graph_on.png",
@@ -224,16 +236,24 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\monitor_graph_03_on.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\detail_bg.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\detail_bg.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\monitor_panel_graph_on.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\monitor_panel_graph_on.png"
     },
     {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\detail_bg.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\detail_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_gps.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_gps.png"
+    },
+    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\detail_title_bg.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\detail_title_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_bluetooth_on.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_bluetooth_on.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\diagno_btn_ok_sel.png",
@@ -242,6 +262,10 @@
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\diagno_table_05.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\diagno_table_05.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\btn_blackbox_new.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\btn_blackbox_new.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\diagno_table_02.png",
@@ -296,12 +320,12 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_box_act.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\driving_btn_left_sel.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\driving_btn_left_sel.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\drivinig_subtitle_04.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\drivinig_subtitle_04.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\driving_btn_left_sel.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\driving_btn_left_sel.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\monitor_graph_04_on.png",
@@ -336,16 +360,20 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\driving_popup_bg.png"
     },
     {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_gps_on.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_gps_on.png"
+    },
+    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\monitor_table.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\monitor_table.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_left_sel.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_left_sel.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\btn_rec_select.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\btn_rec_select.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_left_sel.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_left_sel.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\driving_bg.png",
@@ -360,24 +388,24 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_monitor_sel.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\diagno_icon_error.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\diagno_icon_error.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\diagno_table_04.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\diagno_table_04.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\diagno_icon_error.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\diagno_icon_error.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_equip_sel.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_equip_sel.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\equip_btn_back_sel.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_btn_back_sel.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\equip_box_08_nor.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_box_08_nor.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\equip_btn_back_sel.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_btn_back_sel.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_close_nor.png",
@@ -400,12 +428,12 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\driving_title.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\equip_box_04_sel.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_box_04_sel.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_location_sel.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_location_sel.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\equip_box_04_sel.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_box_04_sel.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_equip_nor.png",
@@ -432,16 +460,20 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\equip_box_02_sel.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\drivinig_subtitle_02.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\drivinig_subtitle_02.png"
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_location_nor.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_location_nor.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_right_sel.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_right_sel.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_location_nor.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_location_nor.png"
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\drivinig_subtitle_02.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\drivinig_subtitle_02.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_gps_off.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_gps_off.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\monitor_title.png",
@@ -464,12 +496,12 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\btn_s_btm_play_off.png"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_home_sel.png",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_home_sel.png"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_folder.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\ic_folder.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\top_btn_home_sel.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\top_btn_home_sel.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_bg.png",
@@ -486,6 +518,10 @@
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\monitor_panel_graph_off.png",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\monitor_panel_graph_off.png"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\main_btn_bluetooth.png",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\drawable-xhdpi\\main_btn_bluetooth.png"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\diagno_title.png",

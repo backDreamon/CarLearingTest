@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.hdd.carleamingTest">
 
-
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -16,13 +15,13 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
-
-
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.GET_TASKS" />
+
     <uses-feature
         android:name="android.hardware.camera.autofocus"
         android:required="false" />
@@ -33,11 +32,11 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name="kr.hdd.carleamingTest.MainApplication"
+        android:name=".MainApplication"
         android:allowBackup="false"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
         <meta-data
             android:name="iap:api_version"
             android:value="1" />
@@ -51,7 +50,6 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation"
@@ -63,47 +61,63 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".activity.BlackBoxActivity"
             android:configChanges="orientation"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
         <activity
             android:name=".activity.FileExplorerActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
         <activity
             android:name=".activity.VideoPlayerActivity"
             android:configChanges="orientation"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
 
-        <!--<activity
+        <!--
+            <activity
             android:configChanges="orientation"
             android:screenOrientation="landscape"
-            android:name="kr.hdd.carleaming.activity." />-->
+            android:name="kr.hdd.carleaming.activity." />
+        -->
 
         <activity
             android:name=".activity.CarBodyActivity"
             android:configChanges="orientation"
             android:screenOrientation="landscape" />
-
         <activity
             android:name=".model.DeviceListActivity"
-            android:theme="@android:style/Theme.Holo.Dialog" />
+            android:theme="@android:style/Theme.Dialog" />
 
         <service
             android:name=".model.BluetoothReadData"
-            android:enabled="true"/>
+            android:enabled="true" />
 
         <receiver android:name=".model.DataBoradcastReciver">
             <intent-filter>
                 <action android:name="carleaming.model.sendreciver" />
             </intent-filter>
         </receiver>
+        <receiver android:name=".MainActivity$UiReceiver">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+
+
     </application>
 
 </manifest>

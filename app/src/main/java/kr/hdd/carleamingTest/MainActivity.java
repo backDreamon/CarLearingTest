@@ -3,6 +3,7 @@ package kr.hdd.carleamingTest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,6 +18,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.Settings;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -34,7 +36,6 @@ import kr.hdd.carleamingTest.activity.BlackBoxActivity;
 import kr.hdd.carleamingTest.activity.CarBodyActivity;
 import kr.hdd.carleamingTest.activity.data.AllDataContentData;
 import kr.hdd.carleamingTest.common.Constants;
-import kr.hdd.carleamingTest.common.data.OBDData;
 import kr.hdd.carleamingTest.common.data.UserCheckDataRes;
 import kr.hdd.carleamingTest.common.data.UserReviseData;
 import kr.hdd.carleamingTest.common.popup.PopupCarInfoEdit;
@@ -45,13 +46,11 @@ import kr.hdd.carleamingTest.http.UrlConstants;
 import kr.hdd.carleamingTest.model.BluetoothReadData;
 import kr.hdd.carleamingTest.model.BluetoothService;
 import kr.hdd.carleamingTest.model.DeviceListActivity;
-import kr.hdd.carleamingTest.req.PidConfig;
 import kr.hdd.carleamingTest.util.CarLLog;
 import kr.hdd.carleamingTest.util.PhoneNumberUtil;
 import kr.hdd.carleamingTest.util.SupportedPidUtill;
 import kr.hdd.carleamingTest.util.Utils;
 
-import static kr.hdd.carleamingTest.MainApplication.IsBtFlag;
 import static kr.hdd.carleamingTest.MainApplication.isConnectBT;
 
 public class MainActivity extends Activity implements OnClickListener, LocationListener {
@@ -96,6 +95,14 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
     //	private boolean isConnectBT= false;
     private boolean isreConnectBT = false;
 
+    //블루투스, GPS 버튼 추가
+    public static Button mBtnBluetooth = null;
+    public static Button mBtnGPS = null;
+    public static BluetoothReadData.UiUpdate uiUpdate = null;
+
+    // OFF : 0, ON : 1, StandBy : 2,
+    private int btState;
+    private int gpsState;
 
 
     @Override
@@ -105,6 +112,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setContentView(R.layout.activity_main);
         mContext = this;
@@ -120,6 +128,10 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         mBtnBlackBox = (Button) findViewById(R.id.btn_blackBox);  //블랙박스
         mBtnCarInfo = (Button) findViewById(R.id.btn_car_info);  //차량정보입력
 
+        //블루투스, GPS 추가
+        mBtnBluetooth = (Button) findViewById(R.id.main_btn_bluetooth);
+        mBtnGPS = (Button) findViewById(R.id.main_btn_gps);
+
         mBtnAtuoDiagnosis.setOnClickListener(this);
         mBtnConsumableManagement.setOnClickListener(this);
         mBtnDriveStyle.setOnClickListener(this);
@@ -129,19 +141,23 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         mBtnCarInfo.setOnClickListener(this);
         mMainTitle.setOnClickListener(this);
 
-        CarLLog.d(TAG, "BT state : " + MainApplication.IsBtFlag);
-        if(IsBtFlag) {
-            mMainTitle.setBackgroundResource(R.drawable.main_title_on);
-        } else {
-            mMainTitle.setBackgroundResource(R.drawable.main_title);
-        }
-
+        //블루투스, GPS 추가
+        mBtnBluetooth.setOnClickListener(this);
+        mBtnGPS.setOnClickListener(this);
 
         mMacAddress = getMacAddress(this);
         mMyPhoneNumber = PhoneNumberUtil.getPhoneNumber(this);//"01011112132";//PhoneNumberUtil.getPhoneNumber(this);
 
-        CarLLog.v(TAG, "macAddress : " + mMacAddress);
-        CarLLog.v(TAG, "mMyPhoneNumber : " + mMyPhoneNumber);
+        /*CarLLog.v(TAG, "macAddress : " + mMacAddress);
+        CarLLog.v(TAG, "mMyPhoneNumber : " + mMyPhoneNumber);*/
+
+
+
+
+
+        uiUpdate = new BluetoothReadData.UiUpdate();
+        uiUpdate.execute();
+
 
         //파라미터 설정
         Map<String, String> params = new HashMap<String, String>();
@@ -150,18 +166,78 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         params.put("userPhoneBTMac", getCutMacAddress(mMacAddress));
         params.put("telephone", getCutMacAddress(mMyPhoneNumber));
 
-        new GsonPostHttpHelper<UserCheckDataRes>(this, mCheckResHandler).
-                startRequest(params, UrlConstants.SERVER + UrlConstants.URL_COMMON, UserCheckDataRes.class);
-
-        mapLocation();
-
+        /*new GsonPostHttpHelper<UserCheckDataRes>(this, mCheckResHandler).
+                startRequest(params, UrlConstants.SERVER + UrlConstants.URL_COMMON, UserCheckDataRes.class);*/
+        //GPS 체크
         chkGpsService();
-
-        reConnectBT();
+        //위치받아오기
+        mapLocation();
+        //블루투스
+        //reConnectBT();
 
         mAllDataDBAsycTask = new AutoDBAsycTask(mContext, mStopAsyncTaskHandler);
         mAllDataDBAsycTask.execute();
+
+
     }
+
+    public static class UiReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            CarLLog.e(TAG, "On Receive()");
+            final String action = intent.getAction();
+
+
+            if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(action)) {
+                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
+                        BluetoothAdapter.ERROR);
+
+                switch (state) {
+                    case BluetoothAdapter.STATE_OFF:
+                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
+                        CarLLog.e(TAG, "STATE_OFF");
+                        break;
+                    case BluetoothAdapter.STATE_CONNECTING:
+                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
+                        CarLLog.e(TAG, "STATE_CONNECTING");
+                        break;
+                    case BluetoothAdapter.STATE_DISCONNECTED:
+                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
+                        CarLLog.e(TAG, "STATE_DISCONNECTED");
+                        break;
+                    case BluetoothAdapter.STATE_DISCONNECTING:
+                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
+                        CarLLog.e(TAG, "STATE_DISCONNECTING");
+                        break;
+                    case BluetoothAdapter.STATE_TURNING_OFF:
+                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
+                        CarLLog.e(TAG, "STATE_TURNING_OFF");
+                        break;
+                    case BluetoothAdapter.STATE_TURNING_ON:
+                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
+                        CarLLog.e(TAG, "STATE_TURNING_ON");
+                        break;
+                    case BluetoothAdapter.STATE_ON:
+                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth));
+                        CarLLog.e(TAG, "STATE_ON");
+                        break;
+                    case BluetoothAdapter.STATE_CONNECTED:
+                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_on));
+                        CarLLog.e(TAG, "STATE_CONNECTED");
+                        break;
+                    default:
+                        CarLLog.e(TAG, "DEFAULT !");
+                }
+
+
+            }
+        }
+    }
+
+    // private final Handler handler;
+
 
     public void mapLocation() {
         //map
@@ -169,10 +245,11 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
 
         Criteria c = new Criteria();
         mProvider = mLocationManager.getBestProvider(c, true);
+        CarLLog.e(TAG, mProvider);
 
         if (mProvider == null || !mLocationManager.isProviderEnabled(mProvider)) {
             List<String> list = mLocationManager.getAllProviders();
-
+            CarLLog.e(TAG, list.size() + "");
             for (int i = 0; i < list.size(); i++) {
                 String temp = list.get(i);
 
@@ -184,17 +261,22 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         }
 
         //마지막으로 조회했던 위치 얻기
-        if(Build.VERSION.SDK_INT >= 23
+        if (Build.VERSION.SDK_INT >= 23
                 && ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
-
+        Location bestLocation = null;
         Location location = mLocationManager.getLastKnownLocation(mProvider);
 
+
         if (location == null) {
-            Toast.makeText(this, "사용 가능한 위치 정보 제공자가 없습니다.", Toast.LENGTH_LONG).show();
+            if (bestLocation == null || location.getAccuracy() < bestLocation.getAccuracy()) {
+                bestLocation = location;
+            }
+
             CarLLog.e(TAG, "사용 가능한 위치 정보 제공자가 없습니다. lat: " + lat + ", lng: " + lng);
+            /*Toast.makeText(this, "사용 가능한 위치 정보 제공자가 없습니다.", Toast.LENGTH_LONG).show();*/
         } else {
             //최종 위해에서부터 이어서 GPS시작
             onLocationChanged(location);
@@ -205,7 +287,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
     //GPS 설정 체크
     private boolean chkGpsService() {
 
-        String gps = android.provider.Settings.Secure.getString(getContentResolver(), android.provider.Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
+        String gps = android.provider.Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
 
         CarLLog.d(gps, "gps");
 
@@ -275,6 +357,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
                 CarLLog.e(TAG, "REQUEST_CONNECT_DEVICE");
                 // When DeviceListActivity returns with a device to connect
                 if (resultCode == Activity.RESULT_OK) {
+                    CarLLog.d(TAG, "RESULT_OK RESPONSE");
                     isConnectBT = true;
 
                     mAllDataDBAsycTask = new AutoDBAsycTask(mContext, mStopAsyncTaskHandler);
@@ -351,6 +434,8 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
 
         if (mBtAdapter == null) {
 
+            Toast.makeText(getApplicationContext(), "블루투스를 사용할 수 없습니다", Toast.LENGTH_SHORT).show();
+
             finish();
 
         } else {
@@ -360,6 +445,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
                 getMacAddress(MainActivity.this);
 
                 mBtAdapter.cancelDiscovery();
+                CarLLog.d(TAG, "캔슬디스커버리()");
                 Intent serverIntent = new Intent(MainActivity.this, DeviceListActivity.class);
                 startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
 
@@ -379,30 +465,26 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         Intent activityIntent = null;
 
         switch (v.getId()) {
-            case R.id.main_icon:
-
-                activityIntent = new Intent(this, DeviceListActivity.class);
-                startActivityForResult(activityIntent, REQUEST_CONNECT_DEVICE);
-                break;
 
             case R.id.main_btn_auto_diagnosis:
-                if (!MainApplication.isConnectBT) {
-                    CarLLog.d(TAG, isConnectBT+"");
+                if (!isConnectBT) {
                     Toast.makeText(mContext, "블루투스가 연결 중이지 않습니다.", Toast.LENGTH_SHORT).show();
-                    enableBluetooth();
-                } else {
-                    //차량 자동 진단
-                    activityIntent = new Intent(this, CarBodyActivity.class);
-                    activityIntent.putExtra("oilVelue", MainApplication.getOil());
-                    activityIntent.putExtra("KmVelue", MainApplication.getAuto_time());
-                    activityIntent.setType(Constants.AUTO_DIAGNOSIS);
-                    startActivity(activityIntent);
                     break;
                 }
 
+                //차량 자동 진단
+                activityIntent = new Intent(this, CarBodyActivity.class);
+                activityIntent.putExtra("oilVelue", MainApplication.getOil());
+                activityIntent.putExtra("KmVelue", MainApplication.getAuto_time());
+                activityIntent.setType(Constants.AUTO_DIAGNOSIS);
+                startActivity(activityIntent);
+                break;
+
             case R.id.main_btn_equip:
-                if (!isConnectBT)
+                if (!isConnectBT) {
                     Toast.makeText(mContext, "블루투스가 연결 중이지 않습니다.", Toast.LENGTH_SHORT).show();
+                    break;
+                }
 
                 //소모품관리
                 activityIntent = new Intent(this, CarBodyActivity.class);
@@ -413,8 +495,11 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
 
                 break;
             case R.id.main_btn_drive_style:
-                if (!isConnectBT)
+                if (!isConnectBT) {
                     Toast.makeText(mContext, "블루투스가 연결 중이지 않습니다.", Toast.LENGTH_SHORT).show();
+                    break;
+                }
+
 
                 //주행스타일
                 activityIntent = new Intent(this, CarBodyActivity.class);
@@ -465,6 +550,22 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
                 popup.show();
                 break;
 
+            case R.id.main_btn_bluetooth:
+                //Toast.makeText(this, "Bluetooth Button Selected", Toast.LENGTH_SHORT).show();
+                /*activityIntent = new Intent(this, DeviceListActivity.class);
+                startActivityForResult(activityIntent, REQUEST_CONNECT_DEVICE);*/
+                reConnectBT();
+                break;
+
+            case R.id.main_btn_gps:
+                //Toast.makeText(this, "GPS Button Selected", Toast.LENGTH_SHORT).show();
+                activityIntent = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                activityIntent.addCategory(Intent.CATEGORY_DEFAULT);
+                startActivity(activityIntent);
+
+                break;
+
+
         }
     }
 
@@ -496,16 +597,6 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
     }
 
-    public  boolean btConnected() {
-        if(!isConnectBT) {
-            Toast.makeText(mContext, "블루투스가 연결 중이지 않습니다.", Toast.LENGTH_SHORT).show();
-            enableBluetooth();
-            return false;
-        } else {
-            return true;
-        }
-
-    }
 
     private Handler mHandler = new Handler(new Handler.Callback() {
 
@@ -656,7 +747,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         super.onResume();
 
         //위치 정보 객체에 이벤트 연결
-        if(Build.VERSION.SDK_INT >= 23
+        if (Build.VERSION.SDK_INT >= 23
                 && ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
@@ -712,8 +803,8 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         editor.commit();
 
         //서버에 데이터 전송
-        new GsonPostHttpHelper<OBDData>(this, mObdDataHandler2).
-                startRequest(new PidConfig().getJson(), UrlConstants.SERVER + UrlConstants.OBD_DATA, OBDData.class);
+        /*new GsonPostHttpHelper<OBDData>(this, mObdDataHandler2).
+                startRequest(new PidConfig().getJson(), UrlConstants.SERVER + UrlConstants.OBD_DATA, OBDData.class);*/
 
         SupportedPidUtill.getInstance().setListsAllClear();
     }
@@ -726,7 +817,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         CarLLog.v(TAG, "onPause");
 
         //위치 정보 객체에 이벤트 해제
-        if(Build.VERSION.SDK_INT >= 23
+        if (Build.VERSION.SDK_INT >= 23
                 && ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
@@ -735,6 +826,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
 
         MainApplication.setDay(Utils.Date());
     }
+
 
     private final Handler mStopAsyncTaskHandler = new Handler(new Handler.Callback() {
 

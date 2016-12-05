@@ -1,33 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_bg" >
+    android:background="@drawable/main_bg">
 
     <Button
         android:id="@+id/btn_car_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="23dp"
+
         android:layout_marginTop="20dp"
         android:background="@drawable/btn_carinfo" />
 
     <TextView
+        android:id="@+id/main_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="208.5dp"
         android:layout_marginTop="23.5dp"
         android:background="@drawable/main_title"
-        android:clickable="true"
-        android:id="@+id/main_icon"/>
+        android:clickable="true" />
 
     <Button
-        android:id="@+id/btn_blackBox"
+        android:id="@+id/main_btn_bluetooth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="561dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/btn_blackbox" />
+        android:layout_marginLeft="500dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/main_btn_bluetooth" />
+
+    <Button
+        android:id="@+id/main_btn_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="536dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/main_btn_gps" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -43,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="73dp"
         android:gravity="center"
-        android:text="차량이름을 입력해주세요."
+        android:text="@string/edit_car_name"
         android:textColor="@color/_E97900"
         android:textSize="16dp" />
 
@@ -75,7 +85,7 @@
         android:id="@+id/main_btn_drive_monitoring"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="124dp"
+        android:layout_marginLeft="28.5dp"
         android:layout_marginTop="224.5dp"
         android:background="@drawable/btn_monitor" />
 
@@ -83,8 +93,17 @@
         android:id="@+id/main_btn_paking_gps_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="320dp"
+        android:layout_marginLeft="224.5dp"
         android:layout_marginTop="225dp"
         android:background="@drawable/btn_location" />
+
+    <Button
+        android:id="@+id/btn_blackBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="420dp"
+        android:layout_marginTop="225dp"
+        android:background="@drawable/btn_blackbox_new" />
+
 
 </RelativeLayout>

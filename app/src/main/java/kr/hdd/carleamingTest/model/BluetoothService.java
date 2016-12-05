@@ -47,6 +47,8 @@ public class BluetoothService implements OBD_TimeOut {
     public static final int STATE_CONNECTED = 3; // now connected to a remote device
     public static final int VIEW_REFLUSH = 4;
 
+
+
     // Constructors
     public BluetoothService() {
         mState = STATE_NONE;

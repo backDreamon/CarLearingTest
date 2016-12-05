@@ -49,9 +49,21 @@
         android:textColor="@color/_FFFFFF"
         android:layout_below="@id/engin_check_alertbox"
         android:layout_marginLeft="215dp"
-        android:layout_marginTop="24.5dp"
+        android:layout_marginTop="30dp"
         android:textSize="24dp"
-        android:text="02:"/>
+        android:text="@string/common_time"/>
+
+    <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
+        android:id="@+id/engin_check_colon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/_FFFFFF"
+        android:layout_below="@id/engin_check_alertbox"
+        android:layout_marginTop="30dp"
+        android:textSize="24dp"
+        android:text="@string/common_colon"
+        android:layout_toRightOf="@+id/engin_check_time_mm"
+        android:layout_toEndOf="@+id/engin_check_time_mm" />
     
     <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
         android:id="@+id/engin_check_time_ss"
@@ -59,10 +71,11 @@
         android:layout_height="wrap_content"
         android:textColor="@color/_FFFFFF"
         android:layout_below="@id/engin_check_alertbox"
-        android:layout_toRightOf="@id/engin_check_time_mm"
-        android:layout_marginTop="24.5dp"
+        android:layout_marginTop="30dp"
         android:textSize="24dp"
-        android:text="00"/>
+        android:text="@string/common_time"
+        android:layout_toRightOf="@+id/engin_check_colon"
+        android:layout_toEndOf="@+id/engin_check_colon" />
     
     <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
         android:id="@+id/engin_check_mileage_mm"
@@ -71,9 +84,9 @@
         android:textColor="@color/_FFFFFF"
         android:layout_below="@id/engin_check_alertbox"
         android:layout_marginLeft="420dp"
-        android:layout_marginTop="24.5dp"
+        android:layout_marginTop="30dp"
         android:textSize="24dp"
-        android:text="2000"/>
+        android:text="@string/common_zero"/>
     
     <kr.hdd.carleamingTest.common.textview.NanumBarunGothicBold_TextView
         android:id="@+id/engin_check_mileage_ss"
@@ -82,9 +95,9 @@
         android:textColor="@color/_FFFFFF"
         android:layout_below="@id/engin_check_alertbox"
         android:layout_toRightOf="@id/engin_check_mileage_mm"
-        android:layout_marginTop="24.5dp"
+        android:layout_marginTop="30dp"
         android:textSize="24dp"
-        android:text=" KM"/>
+        android:text="@string/common_upper_kilometer"/>
     
     <!-- 하단 -->
     

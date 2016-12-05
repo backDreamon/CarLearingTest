@@ -154,11 +154,11 @@ public class AutoDiagnosisFragment extends Fragment implements OnClickListener{
 				time2 = tTimee % 60;
 			}
 			
-			mTimeText1.setText(String.valueOf(time1) + ":");
+			mTimeText1.setText(String.valueOf(time1));
 			if(time2>= 10)
-				mTimeText2.setText(String.valueOf(time2) + ":");
+				mTimeText2.setText(String.valueOf(time2));
 			else
-				mTimeText2.setText("0"+ String.valueOf(time2) + ":");
+				mTimeText2.setText("0"+ String.valueOf(time2));
 			if(time3>= 10)
 				mTimeText3.setText(String.valueOf(time3));
 			else

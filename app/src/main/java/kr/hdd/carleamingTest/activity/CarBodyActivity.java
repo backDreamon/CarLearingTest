@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Point;
 import android.location.Address;
 import android.location.Criteria;
@@ -269,7 +270,7 @@ public class CarBodyActivity extends FragmentActivity implements OnClickListener
                 MapsInitializer.initialize(this);
 
                 ggApiA.isGooglePlayServicesAvailable(this);
-              //  mGoogleMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment)).getMap();
+                //mGoogleMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map_fragment)).getMap();
 
                 // GPS 맵이동
                 setGpsCurrent(String.valueOf(mMap_lat), String.valueOf(mMap_lng), null);
@@ -568,7 +569,11 @@ public class CarBodyActivity extends FragmentActivity implements OnClickListener
         }
 
         //마지막으로 조회했던 위치 얻기
-
+        if(Build.VERSION.SDK_INT >= 23
+                && ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
         Location location = mLocationManager.getLastKnownLocation(mProvider);
 
         if (location == null) {
