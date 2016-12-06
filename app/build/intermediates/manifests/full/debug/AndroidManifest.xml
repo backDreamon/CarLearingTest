@@ -112,9 +112,12 @@
                 <action android:name="carleaming.model.sendreciver" />
             </intent-filter>
         </receiver>
-        <receiver android:name="kr.hdd.carleamingTest.MainActivity$UiReceiver" >
+        <receiver android:name="kr.hdd.carleamingTest.model.BTBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED" />
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
             </intent-filter>
         </receiver>
 

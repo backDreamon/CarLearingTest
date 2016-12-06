@@ -19,7 +19,7 @@ import kr.hdd.carleamingTest.util.CarLLog;
 
 public class BluetoothService implements OBD_TimeOut {
     // Debugging
-    private static final String TAG = "BluetoothService";
+    private static final String TAG = BluetoothService.class.getSimpleName();
 
     // Intent request code
     public static final int REQUEST_CONNECT_DEVICE = 1;

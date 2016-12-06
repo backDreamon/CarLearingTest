@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:2:1-123:12
+ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:2:1-126:12
 	package
 		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml
@@ -98,7 +98,7 @@ ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\Android
 	android:name
 		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:32:22-76
 application
-ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:34:5-121:19
+ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:34:5-124:19
 MERGED from [com.google.android.gms:play-services-maps:9.8.0] C:\Users\back\AndroidStudioProjects\CarLearning1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.8.0\AndroidManifest.xml:24:5-19
 MERGED from [com.google.android.gms:play-services-base:9.8.0] C:\Users\back\AndroidStudioProjects\CarLearning1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.8.0\AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.android.gms:play-services-basement:9.8.0] C:\Users\back\AndroidStudioProjects\CarLearning1\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.8.0\AndroidManifest.xml:19:5-21:19
@@ -229,16 +229,28 @@ action#carleaming.model.sendreciver
 ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:102:17-71
 	android:name
 		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:102:25-68
-receiver#kr.hdd.carleamingTest.MainActivity$UiReceiver
-ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:105:9-109:20
+receiver#kr.hdd.carleamingTest.model.BTBroadcastReceiver
+ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:105:9-112:20
 	android:name
-		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:105:19-58
-intent-filter#android.bluetooth.adapter.action.STATE_CHANGED
-ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:106:13-108:29
+		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:105:19-60
+intent-filter#android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED+android.bluetooth.adapter.action.STATE_CHANGED+android.bluetooth.device.action.ACL_CONNECTED+android.bluetooth.device.action.ACL_DISCONNECTED
+ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:106:13-111:29
 action#android.bluetooth.adapter.action.STATE_CHANGED
 ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:107:17-89
 	android:name
 		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:107:25-86
+action#android.bluetooth.adapter.action.CONNECTION_STATE_CHANGED
+ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:108:17-99
+	android:name
+		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:108:25-97
+action#android.bluetooth.device.action.ACL_CONNECTED
+ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:109:17-87
+	android:name
+		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:109:25-85
+action#android.bluetooth.device.action.ACL_DISCONNECTED
+ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:110:17-91
+	android:name
+		ADDED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml:110:25-88
 uses-sdk
 INJECTED from C:\Users\back\AndroidStudioProjects\CarLearning1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\back\AndroidStudioProjects\CarLearning1\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42

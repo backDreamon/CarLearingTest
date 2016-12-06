@@ -1,6 +1,7 @@
 kr/hdd/carleamingTest/model/DeviceListActivity.class
 com/google/common/collect/ImmutableSortedSetFauxverideShim.class
 android/support/annotation/VisibleForTesting.class
+kr/hdd/carleamingTest/util/SupportedPidUtill.class
 com/google/firebase/FirebaseException.class
 android/support/v4/view/MenuCompat.class
 android/support/v4/media/session/MediaControllerCompat.class
@@ -307,6 +308,7 @@ android/support/annotation/StyleRes.class
 android/support/v4/app/Fragment.class
 android/support/annotation/XmlRes.class
 com/google/common/collect/Ordering.class
+kr/hdd/carleamingTest/model/OBD_Manager$1.class
 android/support/annotation/RequiresApi.class
 android/support/v7/appcompat/R$style.class
 kr/hdd/carleamingTest/common/data/OBDData.class

@@ -3,7 +3,6 @@ package kr.hdd.carleamingTest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -98,7 +97,7 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
     //블루투스, GPS 버튼 추가
     public static Button mBtnBluetooth = null;
     public static Button mBtnGPS = null;
-    public static BluetoothReadData.UiUpdate uiUpdate = null;
+    //public static BluetoothReadData.UiUpdate uiUpdate = null;
 
     // OFF : 0, ON : 1, StandBy : 2,
     private int btState;
@@ -148,17 +147,6 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         mMacAddress = getMacAddress(this);
         mMyPhoneNumber = PhoneNumberUtil.getPhoneNumber(this);//"01011112132";//PhoneNumberUtil.getPhoneNumber(this);
 
-        /*CarLLog.v(TAG, "macAddress : " + mMacAddress);
-        CarLLog.v(TAG, "mMyPhoneNumber : " + mMyPhoneNumber);*/
-
-
-
-
-
-        uiUpdate = new BluetoothReadData.UiUpdate();
-        uiUpdate.execute();
-
-
         //파라미터 설정
         Map<String, String> params = new HashMap<String, String>();
         params.put("entityAlias", "userinfo");
@@ -172,72 +160,12 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
         chkGpsService();
         //위치받아오기
         mapLocation();
-        //블루투스
-        //reConnectBT();
 
         mAllDataDBAsycTask = new AutoDBAsycTask(mContext, mStopAsyncTaskHandler);
         mAllDataDBAsycTask.execute();
 
 
     }
-
-    public static class UiReceiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-
-            CarLLog.e(TAG, "On Receive()");
-            final String action = intent.getAction();
-
-
-            if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(action)) {
-                final int state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE,
-                        BluetoothAdapter.ERROR);
-
-                switch (state) {
-                    case BluetoothAdapter.STATE_OFF:
-                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
-                        CarLLog.e(TAG, "STATE_OFF");
-                        break;
-                    case BluetoothAdapter.STATE_CONNECTING:
-                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
-                        CarLLog.e(TAG, "STATE_CONNECTING");
-                        break;
-                    case BluetoothAdapter.STATE_DISCONNECTED:
-                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
-                        CarLLog.e(TAG, "STATE_DISCONNECTED");
-                        break;
-                    case BluetoothAdapter.STATE_DISCONNECTING:
-                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
-                        CarLLog.e(TAG, "STATE_DISCONNECTING");
-                        break;
-                    case BluetoothAdapter.STATE_TURNING_OFF:
-                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
-                        CarLLog.e(TAG, "STATE_TURNING_OFF");
-                        break;
-                    case BluetoothAdapter.STATE_TURNING_ON:
-                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_off));
-                        CarLLog.e(TAG, "STATE_TURNING_ON");
-                        break;
-                    case BluetoothAdapter.STATE_ON:
-                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth));
-                        CarLLog.e(TAG, "STATE_ON");
-                        break;
-                    case BluetoothAdapter.STATE_CONNECTED:
-                        mBtnBluetooth.setBackground(ContextCompat.getDrawable(context, R.drawable.main_btn_bluetooth_on));
-                        CarLLog.e(TAG, "STATE_CONNECTED");
-                        break;
-                    default:
-                        CarLLog.e(TAG, "DEFAULT !");
-                }
-
-
-            }
-        }
-    }
-
-    // private final Handler handler;
-
 
     public void mapLocation() {
         //map
@@ -387,7 +315,6 @@ public class MainActivity extends Activity implements OnClickListener, LocationL
                     }
                 } else {
                     Toast.makeText(this, "블루투스가 연결 중이지 않습니다.", Toast.LENGTH_SHORT).show();
-//				isreConnectBT= true;
                     isConnectBT = false;
                 }
                 break;

@@ -104,12 +104,12 @@
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\src\\main\\res\\layout\\title_body_layout.xml"
     },
     {
-        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
-        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout\\abc_popup_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
         "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.0.0\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\back\\AndroidStudioProjects\\CarLearning1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",

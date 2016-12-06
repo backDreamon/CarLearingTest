@@ -1,12 +1,9 @@
 package kr.hdd.carleamingTest.model;
 
 import android.app.Service;
-import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Handler.Callback;
@@ -18,7 +15,6 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import kr.hdd.carleamingTest.MainActivity;
 import kr.hdd.carleamingTest.MainApplication;
 import kr.hdd.carleamingTest.database.CommonUpdateAsycTask;
 import kr.hdd.carleamingTest.util.CarLLog;
@@ -48,9 +44,6 @@ public class BluetoothReadData extends Service {
 
     private BluetoothService mBluetoothService = null;
 
-    private MainActivity.UiReceiver uiReceiver;
-    public static  BroadcastReceiver mReceiver;
-
     private Handler mHandler = new Handler(new Callback() {
         @Override
         public boolean handleMessage(Message msg) {
@@ -58,7 +51,6 @@ public class BluetoothReadData extends Service {
             switch (msg.what) {
                 case BluetoothService.STATE_CONNECTED:
                     MainApplication.IsBtFlag = true;
-                    CarLLog.e(TAG,"FUCK");
                     mTimerTask = new TimerTask() {
 
                         @Override
@@ -208,9 +200,9 @@ public class BluetoothReadData extends Service {
     public void onCreate() {
         super.onCreate();
 
-        IntentFilter filter = new IntentFilter();
+        /*IntentFilter filter = new IntentFilter();
         filter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
-        filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
+        filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);*/
 
         /*Intent intent =registerReceiver(uiReceiver, filter);
         if(intent == null) {
@@ -231,7 +223,7 @@ public class BluetoothReadData extends Service {
 
         CarLLog.d(TAG, "onStartCommand");
 
-        try {
+       /* try {
             IntentFilter filter = new IntentFilter();
             filter.addAction(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
             filter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);
@@ -240,7 +232,7 @@ public class BluetoothReadData extends Service {
         } catch (Exception e) {
             CarLLog.e(TAG, e.toString());
         }
-
+*/
 
         if (intent != null) {
             Intent result = (Intent) intent.getExtras().get("intentdata");
@@ -251,11 +243,11 @@ public class BluetoothReadData extends Service {
     }
 
 
-    /**
+/*    *//**
      * Sends a message.
      *
      * @param message A string of text to send.
-     */
+     *//*
     private void sendMessage(String message) {
         // Check that we're actually connected before trying anything
         if (mBluetoothService.getState() != BluetoothService.STATE_CONNECTED) {
@@ -274,7 +266,7 @@ public class BluetoothReadData extends Service {
 //            mOutStringBuffer.setLength(0);
 //            mOutEditText.setText(mOutStringBuffer);
         }
-    }
+    }*/
 
     @Override
     public void onDestroy() {
@@ -320,7 +312,6 @@ public class BluetoothReadData extends Service {
 
         MainApplication.isConnectBT = false;
 
-        unregisterReceiver(mReceiver);
     }
 
     @Override
@@ -339,87 +330,5 @@ public class BluetoothReadData extends Service {
         intentFilter.addAction(MainApplication.RECIVER.KM_RECIVER);
         return intentFilter;
     }
-
-    public static class UiUpdate extends AsyncTask<IntentFilter, Void, Void> {
-
-        int state;
-
-
-
-
-
-        @Override
-        protected void onPreExecute() {
-            mReceiver = new BroadcastReceiver() {
-                @Override
-                public void onReceive (Context context, Intent intent){
-                    CarLLog.e(TAG, "On Receive()");
-                    String action = intent.getAction();
-                    if (BluetoothAdapter.ACTION_STATE_CHANGED.equals(action)) {
-                        state = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
-
-                        switch (state) {
-                            case BluetoothAdapter.STATE_OFF:
-
-                                CarLLog.e(TAG, "STATE_OFF");
-                                break;
-                            case BluetoothAdapter.STATE_CONNECTING:
-
-                                CarLLog.e(TAG, "STATE_CONNECTING");
-                                break;
-                            case BluetoothAdapter.STATE_DISCONNECTED:
-                                CarLLog.e(TAG, "STATE_DISCONNECTED");
-                                break;
-                            case BluetoothAdapter.STATE_DISCONNECTING:
-                                CarLLog.e(TAG, "STATE_DISCONNECTING");
-                                break;
-                            case BluetoothAdapter.STATE_TURNING_OFF:
-                                CarLLog.e(TAG, "STATE_TURNING_OFF");
-                                break;
-                            case BluetoothAdapter.STATE_TURNING_ON:
-                                CarLLog.e(TAG, "STATE_TURNING_ON");
-                                break;
-                            case BluetoothAdapter.STATE_ON:
-                                CarLLog.e(TAG, "STATE_ON");
-                                break;
-                            case BluetoothAdapter.STATE_CONNECTED:
-                                CarLLog.e(TAG, "STATE_CONNECTED");
-                                break;
-                            default:
-                                CarLLog.e(TAG, "DEFAULT !");
-                        }
-                    }
-                }
-            };
-
-
-
-            super.onPreExecute();
-
-
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-        }
-
-
-        @Override
-        protected Void doInBackground(IntentFilter... voids) {
-            CarLLog.e(TAG, "doInBackground params : " + state);
-
-            return null;
-
-        }
-
-        @Override
-        protected void onProgressUpdate(Void... values) {
-            super.onProgressUpdate(values);
-        }
-
-    }
-
-
 }
 
